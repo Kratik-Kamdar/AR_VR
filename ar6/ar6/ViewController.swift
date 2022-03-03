@@ -16,10 +16,12 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     func showShape() {
         let node = SCNNode()
         node.geometry = SCNSphere(radius: 0.1)
-        node.geometry?.firstMaterial?.diffuse.contents = UIImage(named: "img.JPG")
+        node.geometry?.firstMaterial?.diffuse.contents = UIImage(named: "img2.jpeg")
         node.position = SCNVector3(0,0,0)
         node.name = "Sphere"
         let scene = SCNScene()
+        
+        scene.background.contents = UIImage(named: "img.JPG")
         sceneView.scene = scene
         scene.rootNode.addChildNode(node)
         
