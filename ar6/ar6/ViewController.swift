@@ -17,6 +17,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let node = SCNNode()
         node.geometry = SCNSphere(radius: 0.1)
         node.geometry?.firstMaterial?.diffuse.contents = UIImage(named: "img2.jpeg")
+        node.geometry?.firstMaterial?.transparency = 0.5
         node.position = SCNVector3(0,0,0)
         node.name = "Sphere"
         let scene = SCNScene()
